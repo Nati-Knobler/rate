@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebRTC Peer-to-Peer Audio</title>
+</head>
+<body>
+  <h1>WebRTC Peer-to-Peer Audio</h1>
+  <p id="status">Not connected</p>
+
+  <!-- User name input -->
+  <div id="nameSection">
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button id="submitName" style="display:none;">Submit Name</button>
+  </div>
+
+  <!-- Join Queue Button -->
+  <div id="queueSection" style="display:none;">
+    <button id="joinButton">Join Queue</button>
+  </div>
+
+  <!-- Timer -->
+  <div id="timer" style="display:none;">5:00</div>
+
+  <!-- Survey -->
+  <div id="survey" style="display:none;">
+    <p id="surveyPrompt">Rate your match:</p>
+    <input type="number" id="ratingInput" min="1" max="5" placeholder="Rate 1-5" />
+    <button id="submitSurvey">Submit Rating</button>
+  </div>
+
+  <!-- Rejoin Queue Prompt -->
+  <div id="rejoinSection" style="display:none;">
+    <p>Do you want to join the queue again?</p>
+    <button id="rejoinButton">Yes</button>
+  </div>
+
+  <!-- Rating Display -->
+  <p id="ratingDisplay">Your average rating: N/A</p>
+
+  <!-- End Call Button -->
+  <button id="endCall" style="display:none;">End Call</button>
+
+  <!-- Audio Elements -->
+  <audio id="remoteAudio" autoplay></audio>
+  <audio id="localAudio" autoplay muted></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
